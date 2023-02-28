@@ -1,0 +1,43 @@
+﻿<Window x:Class="Прак_2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Прак_2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <DatePicker x:Name="kalendarXuyini" VerticalAlignment="Center" Margin="5,0,5,0" Grid.ColumnSpan="5" FirstDayOfWeek="Monday"/>
+        <TextBlock Text="Название заметки да" Grid.Row="1" Grid.Column="3" HorizontalAlignment="Center" Grid.ColumnSpan="2"/>
+        <TextBlock Text="Текст заметки да" Grid.Row="2" Grid.Column="3" HorizontalAlignment="Center" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="NoteNamer" TextAlignment="Center" Grid.Row="1" Grid.Column="3" Height="25" VerticalAlignment="Top" Margin="5,39,5,0" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="NoteTexter" TextAlignment="Center" Grid.Row="2" Grid.Column="3" Height="25" VerticalAlignment="Top" Margin="5,39,5,0" Grid.ColumnSpan="2"/>
+        <Button x:Name="CreateBtn" Content="Create" Grid.Row="4" Grid.Column="3" Margin="5,35,5,30" Click="Button_Click"/>
+        <Button x:Name="SaveBtn" Content="Save" Grid.Row="4" Grid.Column="4" Margin="5,35,5,30" Click="SaveBtn_Click"/>
+        <Button x:Name="DeleteBtn" Content="Delete note" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" Margin="5,35,5,30" Click="DeleteBtn_Click"/>
+        <ListBox x:Name="NoteList" Grid.Row="1" Grid.Column="0" Grid.RowSpan="3" Grid.ColumnSpan="3" SelectionChanged="NoteList_SelectionChanged">
+            <ListBox.ContextMenu>
+                <ContextMenu>
+                    <TextBlock Text="бука"/>
+                    <TextBlock Text="бяка"/>
+                    <Separator/>
+                    <TextBlock Text="ьуьуьуь"/>
+                </ContextMenu>
+            </ListBox.ContextMenu>
+        </ListBox>
+    </Grid>
+</Window>
